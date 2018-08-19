@@ -1,0 +1,18 @@
+//cmpflt.c --浮点数比较
+#include <math.h>
+#include <stdio.h>
+int main(void){
+	const double ANSWER = 3.14159;
+	double response;
+	
+	printf("What is the value of pi?\n");
+	scanf("%lf",&response);
+	while(fabs(response - ANSWER)>0.001)
+	{
+		printf("Try again!\n");
+		scanf("%1f",&response);
+	}
+	printf("Close enough!\n");
+	
+	return;
+} 
